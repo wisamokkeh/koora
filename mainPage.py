@@ -2,9 +2,12 @@ import time
 
 import assertpage
 import checkPage
+import countPage
 import koraClick
 import main
+import polycPage
 import scrollPage
+import todayField
 
 
 class mainPage():
@@ -22,11 +25,11 @@ class mainPage():
     koraClick.mainClick.main_click(browser)
 
     # click today
-    koora_page.today_click()
+    todayField.today.today_click(browser)
     time.sleep(3)
 
     # england click
-    koora_page.englend_click()
+    countPage.engPage.englend_click(browser)
 
     # assert title
     assertpage.assertP.assert_title(browser)
@@ -40,5 +43,5 @@ class mainPage():
     time.sleep(2)
 
     # polyce click
-    koora_page.polyce()
+    polycPage.polyPage.polyce(browser)
 
